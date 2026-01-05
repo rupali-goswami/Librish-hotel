@@ -1,0 +1,719 @@
+.hero_section {
+    background-image: url(/main_banner.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.hero_section h1 {
+    font-size: 70px;
+    color: #fff;
+    line-height: 80px;
+    margin-bottom: 20px
+}
+
+.under_hero_section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    justify-content: center;
+    background: rgba(36, 50, 74, .7);
+    position: relative;
+    padding: 0px 16px;
+}
+
+.under_hero_section h3 {
+    color: #f7c868;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.under_hero_section .page_wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.about_section .page_wrapper>* {
+    width: 50%;
+}
+
+.about_section .page_wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    gap: 60px;
+}
+
+.card_content {
+    box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    text-align: center;
+}
+
+.single_card {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about_section .about_card {
+    display: flex;
+    gap: 20px;
+}
+
+.card_content h3 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.single_card img {
+    height: 230px;
+    object-fit: cover;
+}
+
+.about_section .about_card .single_card:last-child {
+    flex-direction: column-reverse;
+}
+
+.about_section,
+.our_room_section,
+.hotel_tour_section,
+.testimonial_section,
+.services_section,
+.ftco-intro {
+    padding: 100px 16px;
+}
+
+
+
+.about_content .title {
+    max-width: 500px;
+}
+
+.about_section .about_content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.hero_section h2.tag_name {
+    font-size: 180px;
+    position: absolute;
+    bottom: 0;
+    line-height: 78%;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(-24.58%, rgba(255, 255, 255, 0.7)), color-stop(84.43%, rgba(20, 11, 2, 0)));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) -24.58%, rgba(20, 11, 2, 0) 84.43%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ac8e5e;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.under_hero_section .youtube_icon {
+    min-width: 110px;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    justify-content: center;
+    border-radius: 100%;
+    position: relative;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+@-webkit-keyframes borderanimate2 {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(0.8);
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(2.5);
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+@keyframes borderanimate2 {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(0.8);
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(2.5);
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+.under_hero_section .youtube_icon::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-animation: borderanimate2 2s linear infinite;
+    animation: borderanimate2 2s linear infinite;
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.under_hero_section .youtube_icon::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    height: 90%;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-animation: borderanimate2 2s linear infinite;
+    animation: borderanimate2 2s linear infinite;
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.single_card .card_content img {
+    height: auto;
+    margin: 0 auto 15px;
+}
+
+
+
+.services_section .title,
+.services_section .subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services_card .flaticon {
+    font-size: 70px;
+    line-height: 1.2;
+    color: #c5a880;
+}
+
+.services_card h4 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.services_card .single_service {
+    width: 100%;
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 50% 50% 50% 0;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.services_section .services_card {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.services_section {
+    background: #f8f8f8;
+}
+
+.services_card .single_service:hover {
+    background-color: #c5a880;
+}
+
+.services_card .single_service:hover .flaticon {
+    color: #140b02;
+}
+
+.ftco-intro {
+    background-image: url(/bg_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.ftco-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(34 34 34 / 90%);
+}
+
+.ftco-intro .page_wrapper {
+    gap: 10px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    flex-wrap: wrap;
+}
+
+.ftco-intro-content h2 {
+    max-width: 700px;
+    color: #fff;
+}
+
+.our_room_section .title,
+.our_room_section .subtitle,
+.testimonial_section .title,
+.testimonial_section .subtitle {
+    text-align: center;
+}
+
+.our_room_section .room_cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.room_cards .single_room_card {
+    background: #fff;
+    margin-bottom: 60px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 25px -2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 25px -2px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 25px -2px;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33.33%;
+}
+
+.single_room_card .room_info {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.single_room_card .room_info h4 {
+    font-size: 30px;
+}
+
+.price_per_night {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.price_per_night span {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.price_per_night .btn_book_now {
+    font-size: 16px;
+    line-height: 26px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 5px 15px;
+}
+
+.room_cards .single_room_card:nth-child(even) {
+    flex-direction: column-reverse;
+    display: flex;
+}
+
+.room_cards .single_room_card:hover {
+    background-color: #140b02;
+}
+
+.single_room_card:hover .room_info h4,
+.single_room_card:hover .room_info p,
+.single_room_card:hover .price_per_night span,
+.single_room_card:hover .price_per_night .btn_book_now {
+    color: #fff;
+}
+
+.single_room_card:hover .price_per_night .btn_book_now {
+    border: 1px solid #ffffff4d;
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(197, 168, 128, 0.4);
+        -webkit-box-shadow: 0 0 0 0 rgba(197, 168, 128, 0.4);
+        box-shadow: 0 0 0 0 rgba(197, 168, 128, 0.4);
+    }
+
+    70% {
+        -moz-box-shadow: 0 0 0 30px rgba(197, 168, 128, 0);
+        -webkit-box-shadow: 0 0 0 30px rgba(197, 168, 128, 0);
+        box-shadow: 0 0 0 30px rgba(197, 168, 128, 0);
+    }
+
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(197, 168, 128, 0);
+        -webkit-box-shadow: 0 0 0 0 rgba(197, 168, 128, 0);
+        box-shadow: 0 0 0 0 rgba(197, 168, 128, 0);
+    }
+}
+
+.hotel_tour_section .youtube_icon {
+    width: 80px !important;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    background: #c5a880;
+    margin: 30px auto 0;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hotel_tour_section {
+    text-align: center;
+    background-color: #140b02;
+    background-image: url(/hotel_librish_bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+}
+
+.hotel_tour_section::before {
+    content: '';
+    background: #24324ab3;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.hotel_tour_section .title {
+    color: #fff;
+}
+
+.hotel_tour_section .page_wrapper {
+    position: relative;
+}
+
+.about_section .flaticon {
+    font-size: 60px;
+    line-height: 1.2;
+    color: #c5a880;
+}
+
+.single_testimonial_card {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-shadow: 0 5px 25px -2px #0000000f;
+    margin: 40px 0;
+}
+
+.single_testimonial_card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.single_testimonial_card .testi_wrap {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.single_testimonial_card .testi_wrap img {
+    height: 80px;
+    border-radius: 100%;
+    width: 80px;
+    display: block;
+    min-width: 80px;
+    object-fit: cover;
+}
+
+.testimonial_cards {
+    display: flex;
+    gap: 20px;
+
+}
+
+.testimonial_section .swiper-pagination-bullet-active {
+    background-color: #140b02;
+}
+
+.testimonial_section .testi_info h5 {
+    color: rgb(247, 200, 104);
+}
+
+.single_room_card .room_image {
+    display: block;
+    position: relative;
+}
+
+.single_room_card:hover .room_image::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(20, 11, 2, 0.5);
+}
+.home_booking_form .booking_form.spacing_btw {
+    padding: 0 16px;
+    position: relative;
+}
+.home_booking_form {
+    position: relative;
+    margin-top: -61px;
+}
+
+
+
+@media(max-width: 1300px) {
+    .hero_section h2.tag_name {
+        font-size: 150px;
+    }
+}
+
+
+@media(max-width: 1200px) {
+    .hero_section h2.tag_name {
+        font-size: 134px;
+    }
+}
+
+
+@media(max-width: 991px) {
+    .hero_section h2.tag_name {
+        font-size: 102px;
+    }
+
+    .under_hero_section .youtube_icon {
+        width: 80px;
+        min-width: 80px;
+        height: 80px;
+    }
+
+    .hero_section h1 {
+        font-size: 58px;
+        line-height: 68px;
+    }
+
+    .about_section .page_wrapper {
+        flex-direction: column;
+    }
+
+    .about_section .page_wrapper>* {
+        width: 100%;
+    }
+
+
+
+    .services_section .services_card {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+
+    .our_room_section .room_cards {
+        flex-direction: column;
+    }
+
+    .room_cards .single_room_card {
+        width: 100%;
+    }
+
+    .room_cards .single_room_card {
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 0
+    }
+
+    .room_cards .single_room_card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .our_room_section .room_cards {
+        gap: 30px;
+    }
+
+    .services_card h4 {
+        font-size: 16px;
+    }
+
+    .single_room_card .room_info h4 {
+        font-size: 24px;
+    }
+
+    .footer h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .under_hero_section {
+        min-height: 600px;
+    }
+
+    .services_card .single_service {
+        width: calc(24.33% - 10px);
+    }
+}
+
+
+@media(max-width: 800px) {
+    .services_card .single_service {
+        width: calc(33.33% - 14px);
+    }
+}
+
+@media(max-width: 767px) {
+    .under_hero_section .page_wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .hero_section h2.tag_name {
+        font-size: 76px;
+        text-align: center;
+    }
+
+    .about_section .about_card {
+        flex-direction: column;
+    }
+
+    .single_card {
+        flex-direction: column;
+    }
+
+    .about_section .single_card:first-child {
+        flex-direction: column-reverse;
+    }
+
+    .single_card {
+        width: 100%;
+    }
+
+
+
+    .room_cards .single_room_card {
+        flex-direction: column-reverse;
+    }
+
+    .room_cards .single_room_card:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .about_section,
+    .our_room_section,
+    .hotel_tour_section,
+    .testimonial_section,
+    .services_section,
+    .ftco-intro {
+        padding: 60px 16px;
+    }
+
+
+    .under_hero_section {
+        text-align: center;
+    }
+
+    .under_hero_section .youtube_icon {
+        margin: 0;
+    }
+
+    .under_hero_section h3 {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+.home_booking_form {
+    margin-top: 60px;
+}
+}
+
+
+@media (max-width: 550px) {
+    .hero_section h2.tag_name {
+        font-size: 56px;
+    }
+
+    .services_card .single_service {
+        width: calc(50% - 10px);
+    }
+
+    .hero_section h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 410px) {
+    .hero_section h2.tag_name {
+        font-size: 44px;
+    }
+}

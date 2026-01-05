@@ -1,0 +1,102 @@
+.about_hotel_section {
+    padding: 100px 16px;
+}
+.about_hotel_section .page_wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.about_hotel_section .about_image {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 50%;
+}
+.about_hotel_section .about_content {
+    width: 50%;
+}
+.about_image_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+.about_image_inner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.about_hotel_section .about_content p {
+    margin-top: 12px;
+}
+.about_hotel_section .about_content h2.title {
+    margin-bottom: 20px;
+}
+.designed_rooms_section {
+    padding: 100px 16px;
+    background-image: url(/about2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #000;
+    position: relative;
+}
+.designed_rooms_section h2, .designed_rooms_section p {
+    color: #fff;
+}
+.designed_rooms_section h2 {
+    margin-bottom: 10px;
+}
+.designed_rooms_section p {
+    margin-top: 10px;
+}
+.designed_rooms_section:before {
+    content: "";
+    background: #222222e6;
+    position: absolute;
+    inset: 0;
+}
+.designed_rooms_section .page_wrapper {
+    position: relative;
+}
+.librish_services {
+    padding: 100px 16px;
+}
+.librish_services .page_wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.librish_services .page_wrapper > * {
+    width: 50%;
+}
+.librish_services ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+.librish_services .title {
+    margin-bottom: 10px;
+}
+.top_space {
+    margin-top: 30px
+}
+
+
+@media(max-width: 767px) {
+.about_hotel_section, .designed_rooms_section, .librish_services {
+    padding: 60px 16px;
+}
+.about_hotel_section .page_wrapper {
+    flex-direction: column-reverse;
+}
+.about_hotel_section .about_image,
+.about_hotel_section .about_content,
+.librish_services .page_wrapper > * {
+    width: 100%;
+}
+.librish_services .page_wrapper {
+    flex-direction: column;
+}
+}

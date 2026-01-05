@@ -1,0 +1,117 @@
+.contact_section {
+    padding: 100px 16px;
+}
+.contact_section .page_wrapper {
+    display: flex;
+    gap: 40px;
+}
+.contact_section .page_wrapper > .contact_form {
+    width: 60%;
+}
+.contact_section .page_wrapper > .contact_content {
+    width: 40%;
+}
+.contact_form form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 30px;
+    margin-top: 40px;
+}
+
+.contact_form form textarea, .contact_form form button {
+    width: 100%;
+}
+.contact_form form input, .contact_form form textarea {
+    padding: 14px 30px;
+    outline: 0;
+    background-color: #f4f5f8;
+    border: 1px solid #f4f5f8;
+    color: #140b02;
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+}
+.contact_form form input::placeholder, .contact_form form textarea::placeholder {
+     color: #686a6f;
+}
+.contact_form form input {
+    width: calc(50% - 15px);
+    height: calc(2.25rem + 27px);
+}
+ .contact_form form textarea {
+    min-height: 183px;
+ }
+ .contact_form form button {
+    max-width: 170px;
+    cursor: pointer;
+    margin-top: 0 !important;
+}
+.contact_section .page_wrapper > .contact_content h2.title {
+    margin-bottom: 20px;
+}
+.contact_content .contact_info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+.contact_content .contact_info ul a {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    color: #140b02;
+    line-height: 24px;
+}
+.contact_content .contact_info ul a span {
+    height: 80px;
+    width: 80px;
+    background-color: #0e0e0e;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    justify-content: center;
+}
+.contact_content .contact_info ul a strong {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    color: #140b02;
+}
+.contact_content .contact_info ul p {
+    padding-top: 10px;
+}
+.contact_content .contact_info ul a:hover svg path {
+    fill: #140b02;
+}
+.contact_content .contact_info ul a:hover span {
+    background-color: #f7c868;
+}
+
+
+
+@media(max-width: 991px) {      
+.contact_section .page_wrapper {
+    flex-direction: column;
+}
+.contact_section .page_wrapper > .contact_form,
+.contact_section .page_wrapper > .contact_content {
+    width: 100%;
+}
+}
+
+@media(max-width: 767px) {    
+.contact_section {
+    padding: 60px 16px;
+}
+.contact_form form input {
+    width: 100%;
+}
+.contact_content .contact_info ul a span {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+}
+}
