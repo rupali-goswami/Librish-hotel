@@ -1,0 +1,24 @@
+.check_rooms {
+    color: #fff;
+}
+.available_rooms_wrapper {
+    padding: 60px 16px;
+}
+.available_room_card {
+    border: 1px solid #f4f5f8;
+    padding: 20px;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.available_rooms_wrapper .page_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.available_rooms_wrapper .btn.inner_btn {
+    margin-top: 0;
+}

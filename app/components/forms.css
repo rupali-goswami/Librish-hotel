@@ -1,0 +1,78 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 30px;
+    margin-top: 40px;
+}
+
+form textarea, button {
+    width: 100%;
+}
+form input, form textarea {
+    padding: 14px 30px;
+    outline: 0;
+    background-color: #f4f5f8;
+    border: 1px solid #f4f5f8;
+    color: #140b02;
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+}
+input::placeholder, textarea::placeholder {
+     color: #686a6f;
+}
+form input {
+    width: 100%;
+    height: calc(2.25rem + 27px);
+}
+form textarea {
+    min-height: 183px;
+ }
+form button {
+    max-width: 170px;
+    cursor: pointer;
+    margin-top: 0 !important;
+}
+.form_banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.under_form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+.form_banner::before {
+    content: "";
+    background: #222222b3;
+    position: absolute;
+    inset: 0;
+}
+.register_link {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 28px;
+}
+.form_flex {
+    margin: 60px 0;
+    padding: 0px 16px;
+}
+.register_link .link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.error_msg {
+    color: red;
+    margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+form {
+    margin-top: 20px;
+}
+}

@@ -9,10 +9,10 @@ export default function Footer() {
         <div className="column footer_main_logo">
           <a href="/">
            <Image
-                    src="/logo-librish.webp"
+                    src="/hotel-the-librish.webp"
                     alt="Librish Logo"
-                    width={80}
-                    height={40}
+                    width={200}
+                    height={118}
                     priority
                   />
                   </a>

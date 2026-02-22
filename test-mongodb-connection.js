@@ -1,9 +1,9 @@
 import { MongoClient } from 'mongodb';
 
-const client = new MongoClient('mongodb+srv://devrupali_db_user:devrupali567@cluster0.s7le2p0.mongodb.net/Cluster0?retryWrites=true&w=majority');
+//const client = new MongoClient('mongodb+srv://devrupali_db_user:devrupali567@cluster0.s7le2p0.mongodb.net/Cluster0?retryWrites=true&w=majority');
 
 
-//const client = new MongoClient(process.env.MONGODB_URI);
+const client = new MongoClient(process.env.MONGODB_URI);
 
 console.log("hii");
 async function testConnection() {

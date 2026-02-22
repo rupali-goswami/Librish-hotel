@@ -1,0 +1,32 @@
+[
+  {
+    "roomId": 101,
+    "type": "Suite",
+    "price": 100,
+    "maxAdults": 1,
+    "maxChildren": 1,
+    "description": "Spacious and elegant, our Suite Room is designed for guests who enjoy extra comfort and privacy. Featuring modern décor, a plush king-size bed, and a relaxing seating area.",
+    "bookings": []
+  },
+  {
+    "roomId": 102,
+    "type": "Deluxe",
+    "price": 150,
+    "maxAdults": 2,
+    "maxChildren": 2,
+    "description": "Perfect for families or small groups, the Family Room offers ample space, comfort, and convenience. Enjoy a warm ambiance with thoughtfully arranged interiors.",
+    "bookings": [
+     
+    ]
+  },
+  {
+    "roomId": 103,
+    "type": "Luxury",
+    "price": 500,
+    "maxAdults": 1,
+    "maxChildren": 0,
+    "description": "Our Deluxe Room blends style and comfort, making it ideal for business travelers and couples. Designed with modern furnishings and calming tones.",
+    "bookings": [
+    ]
+  }
+]

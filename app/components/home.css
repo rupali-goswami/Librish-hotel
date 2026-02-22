@@ -133,7 +133,7 @@
     text-transform: uppercase;
 }
 
-.under_hero_section .youtube_icon {
+.hero_section .youtube_icon {
     min-width: 110px;
     width: 110px;
     height: 110px;
@@ -183,7 +183,7 @@
     }
 }
 
-.under_hero_section .youtube_icon::before {
+.hero_section .youtube_icon::before {
     position: absolute;
     content: "";
     left: 50%;
@@ -198,7 +198,7 @@
     transform: translate(-50%, -50%);
 }
 
-.under_hero_section .youtube_icon::after {
+.hero_section .youtube_icon::after {
     position: absolute;
     content: "";
     left: 50%;
@@ -531,6 +531,40 @@
     position: relative;
     margin-top: -61px;
 }
+.hero_section video {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.hero_section .youtube_icon_wrapper {
+        z-index: 1;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    left: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -553,7 +587,7 @@
         font-size: 102px;
     }
 
-    .under_hero_section .youtube_icon {
+    .hero_section .youtube_icon {
         width: 80px;
         min-width: 80px;
         height: 80px;
@@ -683,7 +717,7 @@
         text-align: center;
     }
 
-    .under_hero_section .youtube_icon {
+    .hero_section .youtube_icon {
         margin: 0;
     }
 
@@ -693,6 +727,14 @@
     }
 .home_booking_form {
     margin-top: 60px;
+}
+.hero_section .youtube_icon_wrapper {
+    justify-content: center;
+    top: auto;
+    left: 0;
+    right: 0;
+    transform: none;
+    bottom: 0;
 }
 }
 

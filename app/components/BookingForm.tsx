@@ -1,88 +1,75 @@
 "use client";
+
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export type BookingFormData = {
-    checkIn: string;
-    checkOut: string;
-    room: string;
-    guests: number;
+type BookingFormProps = {
+  roomId: number;
+  price: number;
+  maxAdults: number;
+  maxChildren: number;
 };
 
-type Props = {
-    onSubmitSuccess?: (data: BookingFormData) => void;
-};
+export default function BookingForm({
+  roomId,
+  price,
+  maxAdults,
+  maxChildren,
+}: BookingFormProps) {
+  const router = useRouter();
 
-export default function BookingForm({ onSubmitSuccess }: Props) {
-    const [form, setForm] = useState<BookingFormData>({
-        checkIn: "",
-        checkOut: "",
-        room: "suite",
-        guests: 1,
-    });
+  const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-    ) => {
-        const { name, value } = e.target;
-        setForm((prev) => ({
-            ...prev,
-            [name]: name === "guests" ? Number(value) : value,
-        }));
-    };
+  const handleRedirect = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault(); // 🔥 very important
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
+    if (!checkIn || !checkOut) {
+      alert("Please select dates");
+      return;
+    }
 
-        const res = await fetch("/api/check-availability", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(form),
-        });
+    const url = `/availability?checkIn=${checkIn}&checkOut=${checkOut}&adults=${adults}&children=${children}`;
 
-        const data = await res.json();
+    console.log("REDIRECTING TO:", url); // 🔍 debug
 
-        if (onSubmitSuccess) {
-            onSubmitSuccess(form);
-        }
+    router.push(url);
+  };
 
-        alert(data.message);
-    };
+  return (
+    <form>
+      <h2>Book This Room</h2>
 
-    return (
-        <div className="booking_form spacing_btw">
-        <div className="page_wrapper">
-        <form onSubmit={handleSubmit} className="booking-form">
-            <div className="input_field">
-                <label>Check In</label>
-                <input type="date" name="checkIn" onChange={handleChange} required />
-            </div>
+      <label>Check-in</label>
+      <input type="date" value={checkIn} onChange={(e) => setCheckIn(e.target.value)} />
 
-            <div className="input_field">
-                <label>Check Out</label>
-                <input type="date" name="checkOut" onChange={handleChange} required />
-            </div>
+      <label>Check-out</label>
+      <input type="date" value={checkOut} onChange={(e) => setCheckOut(e.target.value)} />
 
-            <div className="input_field">
-                <label>Room Type</label>
-                <select name="room" onChange={handleChange}>
-                    <option value="suite">Suite</option>
-                    <option value="classic">Classic Room</option>
-                    <option value="deluxe">Deluxe Room</option>
-                </select>
-            </div>
+      <label>Adults</label>
+      <input
+        type="number"
+        min={1}
+        max={maxAdults}
+        value={adults}
+        onChange={(e) => setAdults(+e.target.value)}
+      />
 
-            <div className="input_field">
-                <label>Number of Guests</label>
-                 <select name="guests" onChange={handleChange}>
-                    <option value="1">1 person</option>
-                    <option value="2">2 people</option>
-                    <option value="3">3 people</option>
-                    <option value="4">4 people</option>
-                </select>
-            </div>
-            <button type="submit">Confirm Booking</button>
-        </form>
-        </div>
-        </div>
-    );
+      <label>Children</label>
+      <input
+        type="number"
+        min={0}
+        max={maxChildren}
+        value={children}
+        onChange={(e) => setChildren(+e.target.value)}
+      />
+
+      {/* 🔴 IMPORTANT FIX */}
+      <button type="button" onClick={handleRedirect}>
+        Check Availability
+      </button>
+    </form>
+  );
 }

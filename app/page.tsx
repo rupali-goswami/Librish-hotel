@@ -1,30 +1,33 @@
+"use client";
+
+import { useRef } from "react";
 import Image from "next/image";
 import "./components/home.css";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import TestimonialSlider from "./components/TestimonialSlider";
-
-
+import HeroController from "./components/HeroController";
+import Link from "next/link";
 
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null!);
   return (
     <main>
       <div className="hero_section">
+       <HeroController />
         <div className="under_hero_section">
           <h2 className="tag_name">Luxury Hotel</h2>
           <div className="page_wrapper">
             <div>
               <h3> Enjoy Your Wonderful Holidays With A Great Luxury Experience!</h3>
               <h1>Most Relaxing Place</h1>
-              <a className="btn" href="#">Discover Rooms
+              <Link className="btn" href="#">Discover Rooms
                 <img src="/button-arrow.svg" width={16} height={16} loading="lazy" alt="arrow" />
-              </a>
+              </Link>
             </div>
-            <a className="youtube_icon" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="#140b02" width="30px" height="30px" viewBox="0 0 24 24"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z" /></svg>
-            </a>
+           
           </div>
 
           
@@ -79,9 +82,9 @@ export default function Home() {
               Surrounded by a calm atmosphere and designed with modern comfort in mind, our hotel is the perfect escape from the busy city life.
             </p>
             <p>Whether you are traveling for business or leisure, Hotel Librish ensures a relaxing stay with premium services, stylish interiors, and warm hospitality.</p>
-            <a className="btn inner_btn" href="#">About Us
+            <Link className="btn inner_btn" href="#">About Us
               <img src="/button-arrow.svg" width={16} height={16} loading="lazy" alt="arrow" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -140,9 +143,9 @@ export default function Home() {
             <h3 className="subtitle">Find Best Hotel For Leaving</h3>
             <h2 className="title">Find the Best Hotel in Your Next Vacation</h2>
           </div>
-          <a className="btn inner_btn" href="#">Book Now
+          <Link className="btn inner_btn" href="#">Book Now
             <img src="/button-arrow.svg" width={16} height={16} loading="lazy" alt="arrow" />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -158,7 +161,7 @@ export default function Home() {
                 <p>Spacious and elegant, our Suite Room is designed for guests who enjoy extra comfort and privacy. Featuring modern décor, a plush king-size bed, and a relaxing seating area.</p>
                 <div className="price_per_night">
                   <span>$450 / Night</span>
-                  <a href="#" className="btn_book_now">Book Now</a>
+                  <Link href="#" className="btn_book_now">Book Now</Link>
                 </div>
               </div>
               <Image
@@ -176,7 +179,7 @@ export default function Home() {
                 <p>Perfect for families or small groups, the Family Room offers ample space, comfort, and convenience. Enjoy a warm ambiance with thoughtfully arranged interiors.</p>
                 <div className="price_per_night">
                   <span>$350 / Night</span>
-                  <a href="#" className="btn_book_now">Book Now</a>
+                  <Link href="#" className="btn_book_now">Book Now</Link>
                 </div>
               </div>
               <Image
@@ -194,7 +197,7 @@ export default function Home() {
                 <p>Our Deluxe Room blends style and comfort, making it ideal for business travelers and couples. Designed with modern furnishings and calming tones.</p>
                 <div className="price_per_night">
                   <span>$300 / Night</span>
-                  <a href="#" className="btn_book_now">Book Now</a>
+                  <Link href="#" className="btn_book_now">Book Now</Link>
                 </div>
               </div>
               <Image
@@ -215,7 +218,7 @@ export default function Home() {
         <div className="page_wrapper">
           <h3 className="subtitle">Watch our luxurious hotel</h3>
           <h2 className="title">Take A Tour</h2>
-          <a className="youtube_icon" href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="30px" height="30px" viewBox="0 0 24 24"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg></a>
+          <Link className="youtube_icon" href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="30px" height="30px" viewBox="0 0 24 24"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg></Link>
         </div>
       </div>
 
